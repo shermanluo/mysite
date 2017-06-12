@@ -1,0 +1,318 @@
+﻿<!Doctype html>
+<html>
+<head>
+<style>
+body {margin: 0; padding: 0; border: 0; outline: 0; height: 100%; width: 100%;}
+#name {
+float: left;
+padding-left: 5px;
+position: relative;
+font-size: 50px;
+
+}
+h2 {
+margin: 0px;
+}
+#nav {
+position: sticky;
+list-style-type: none;
+margin-top: 0px;
+padding: 0px;
+background-color: rgb(32, 32, 32);
+right: 0px;
+left: 0px;
+top: 0px;
+z-index: 3;
+min-width: 1000px;
+overflow: auto;
+margin-bottom: -10px;
+}
+
+li.nav {
+float: right;
+position: relative;
+height: 100%;
+bottom: -3.5px;
+}
+li.nav:hover {
+background-color: grey;
+}
+
+li a.nav {
+display: block;
+border-right-style: solid;
+border-color: grey;
+border-width: 2px;
+text-align: center;
+padding : 8px;
+text-decoration: none;
+font-size: 30px;
+color: rgb(0, 102, 204);
+}
+div.blck {
+background-color: white;
+height: 1000px;
+position: relative;
+top: 0px;
+min-width: 1000px;}
+
+div.blck3 {
+min-width: 1000px;
+background-color: black;
+height: 1600px;
+position: relative;
+top: 0px; }
+
+#inside {
+position: absolute; 
+width: 45%;
+height: 70%;
+padding: 10px;
+margin: 5%;
+border-radius: 15px;
+
+
+}
+img.me {
+position: absolute;
+height: 45%;
+width: 35%;
+right: -3%;
+top: 5%;
+margin: 10%;
+border-radius: 15px;}
+
+#campanile {
+position: sticky;
+width: 100%;
+height: 900px;
+top: 50px;
+right: 0px;
+min-width: 1000px;
+margin-bottom: -900px;
+z-index: 0.5;
+blur: 100px;
+background-image: url("campanile.jpg");
+background-repeat: no-repeat;
+background-size: cover; 
+opacity: 0.8;
+}
+
+#edu {
+background-color: rgba(212,175,55, 0.8);
+border-style: solid;
+border-width: 5px;
+border-radius: 16px;
+width: 58%;
+height: 30%;
+position: relative;
+top: 5%;
+left: 5%;
+float: left;
+padding-left: 15px;}
+
+#expr {
+background-color: rgba(212,175,55, 0.8);
+border-style: solid;
+border-width: 5px;
+border-radius: 16px;
+width: 75%;
+height: 30%;
+position: relative;
+bottom: -35%;
+left: 5%;
+float: left;
+padding-left: 15px;}
+
+
+div.blck2 {
+
+min-width: 1000px;
+height: 2000px;
+position: relative;
+top: 0px;
+/*background-image: url("campanile.jpg");*/
+background-repeat: no-repeat;
+background-size: cover; }
+
+#skills {
+border-width: 5px;
+border-style: solid;
+width: 40%;
+position: absolute;
+bottom: 40%;
+left: 10%;
+height: 20%;
+background-color: rgba(51,153,255, 0.8);
+border-radius: 16px;
+}
+#skill-list {
+display: block;
+position: absolute;
+font-size: 20pt;
+top: -10px;}
+
+img.project {
+height: 100%;
+width: 20%;
+float: left;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;}
+
+#projects {
+position: absolute;
+top: 3%;
+left: 5%;
+}
+div.project {
+border: 9px solid rgb(0, 102, 204);
+border-radius: 15pt;
+overflow - auto; 
+margin-left: 9%;
+margin-top: 10%;
+margih-right: 9%;
+width: 82%;
+height: 17%;
+float: left;
+background-color: white;}
+
+div.blck4 {
+min-width: 1000px;
+background-color: rgb(0, 153, 153);
+height: 1200px;
+position: relative;
+top: 0px; }
+
+#contact {
+position: absolute;
+margin-left: 10%;
+margin-right: 10%;
+height: 70%;
+width: 80%;
+bottom: 10%;
+top: 10%;
+overflow-y: scroll;
+}
+#form {
+}
+.smallentry {
+margin-left: 5%;
+margin-bottom: 2%;
+width: 90%;
+border-radius: 8px;
+height:50px;
+font-size:24pt;
+}
+span.form-text {
+position: relative;
+left: 5%;
+font-size: 16pt;
+}
+#mess {
+margin-left: 5%;
+width: 90%;
+height: 35%;
+position: relative;
+font-size: 16pt;
+}
+
+.project-title {
+margin: 0.7%;
+font-size: 24pt;
+}
+.projectdesc {
+position: relative;
+left: 0.7%;
+font-size: 18pt;}
+
+</style>
+</head>
+
+<body>
+<ul id = "nav">
+<li id = "name" style = "color: white;">Sherman Luo</li>
+<li class = "nav"><a class = "nav" href="#4">Contact</a></li>
+<li class = "nav"><a class = "nav" href="#3">Projects</a></li>
+<li class = "nav"><a class = "nav" href="#2">Education/Experience</a></li>
+<li class = "nav"><a class = "nav" href="#1">Home</a></li>
+</ul>
+
+<div class = "blck" id = "1">
+<div id = "inside"> 
+<h2 style = "font-size: 35pt; color: darkblue">About me</h2>
+<p style = "font-size: 22pt; text-align: justify; color: rgb(120, 120, 120);"> Hi, thanks for visiting my website! My name is Sherman, and I'm a second year Computer Science student at the University of California, Berkeley. Throughout my studies, I've developed an interest in web development, networking, and artificial intelligence. I'm driven to learn new cutting-edge technologies that are impacting the computer science field today, and I'm always looking to solve interesting problems. And one day, I hope to create my own tech-start up here in Silicon Valley. 
+</p> 
+<p style = "font-size: 22pt; text-align: justify; color: rgb(120, 120, 120);"> Here you can see my qualifications, my education, and my projects. Feel free to contact me at shermanluo@berkeley.edu, or using the contact form below. 
+</p> 
+</div>
+<div> <img class = "me" src ="whiteduck.jpg">
+</img></div>
+</div>
+
+<div id = "campanile" ></div>
+<div class = "blck2" id = "2">
+<div id = "edu">
+<p id = "education" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt;">Education</span><br><br><span style = "font-size:26pt">University of California, Berkeley : 2016-2020 </span><br> Major: Computer Science <br> Technical GPA: 4.0 <br>Relevant courses: 
+</p>
+<ul style= "margin: 0px; font-size: 20pt">
+<li> Math 54: Linear Algebra and Differential Equations | A+</li>
+<li> CS 61A: Structure and Interpretation of Computer Programs | A</li>
+<li> CS 61B: Data Structures| A</li>
+<li> CS 70: Discrete math and Probability theory | A</li>
+</ul>
+<br>
+<br>
+<p id = "education" style= "margin: 0px; font-size: 20pt;"> <span style = "font-size: 26pt"> Evergreen Valley College 2015 </span><br> GPA: 4.0 <br>Relevant courses: </p>
+<ul style = "font-size : 20pt">
+<li> Math 073: Multivariable Calculus | A</li>
+</ul>
+</div>
+<div id = "skills"> <br>
+<ul id = "skill-list"> 
+<span style = "font-size: 30pt">Skills</span>
+<li>Java</li>
+<li>Python</li>
+<li>C#</li>
+<li>HTML, CSS, Javascript</li>
+<li>Scheme</li>
+<li>SQL</li>
+<li>Unity Game Engine</li>
+</ul></div>
+<div id = "expr">
+<p id = "experience" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt;">Experience</span><br><br>
+<ul> 
+<li>CS61A Academic Intern - Summer 2017, University of California, Berkeley <br> hello</li>
+<li>Python</li>
+<li>C#</li>
+
+</ul>
+</div>
+</div>
+
+<div class = "blck3" id = "3">
+<h2 id = "projects" style = "font-size: 50pt; color: lightblue">Projects</h2><br>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">www.shermanluo@github.io - 2017</span><br><br><p class = "projectdesc">You're on it right now! Created using HTML, CSS, Javascript, and MongoDB for the form handling.</p></div>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">SuperMarioMan Remix - 2016 CalHacks, University of California Berkeley</span><br> <p class = "projectdesc">SuperMarioMan Remix is a game I created during CalHacks 3.0, over a period of 36 hours. This mobile Android game was created in the Unity game engine using C#, with sound and art taken from the internet. Though it was once on the Google Play store, it was unfortunately removed due to copyright issues. </p></div>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">Floatyloon - 2015 NHSGA, Carnegie Mellon University</span><br> <p class = "projectdesc">My first game for the PC at Carnegie Mellon created over the course of one week, in which I was the lead programmer. Coded in the Unity game engine using C#, sound and art developed by teammates.</p></div>
+</div>
+
+<div class = "blck4" id = "4"> 
+<div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 26pt">Contact Me</h3> </br>
+<form id = "form" action="/action", method = "post">
+<span class = "form-text">First name *: </span><br>
+<input type="text" class = "smallentry" name = "firstname" for="firstname"><br>
+<span class = "form-text">Last name *: </span><br>
+<input type="text" class = "smallentry" name = "lastname"><br>
+<span class = "form-text">Email *: </span><br>
+<input type="text" class = "smallentry" name = "email"><br>
+<span class = "form-text">Phone number: </span><br>
+<input type="text" class = "smallentry" name = "phonenumber"><br>
+<span class = "form-text">Message *: </span><br>
+<textarea name="message" id = "mess" rows="10" cols="30">
+</textarea> <br>
+<input type="submit"> 
+</form>
+</div>
+</div>
+</body>
+</html>
