@@ -7,7 +7,7 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'shermyluo@gmail.com',
-    pass: 'lovedad1'
+    pass: 'love1'
   }
 });
 var htmlPath = path.join(__dirname, 'public');
@@ -25,7 +25,7 @@ app.post('/', function(req, res) {
   to: 'shermanluo@berkeley.edu',
   subject: req.body.firstname + " " + req.body.lastname,
   text: req.body.message
-};
+  };
   console.log("HELLO2");
   transporter.sendMail(mailOptions, function(error, info){
   console.log("HELLO");
@@ -34,7 +34,7 @@ app.post('/', function(req, res) {
   } else {
     console.log('Email sent: ' + info.response);
   }
-});
+  });
     console.log("1 record inserted");
 	MongoClient.connect(url, function(err, db) {
 	if (err) throw err;
