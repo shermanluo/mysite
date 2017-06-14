@@ -1,0 +1,32 @@
+{
+  "name": "My website",
+  "version": "0.2.6",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "6.11.0"
+  },
+  "main": "swag.js",
+  "scripts": {
+    "start": "node swag.js"
+  },
+  "dependencies": {
+    "express": "4.15.2"
+	"mongodb": "2.2"
+	
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroku/node-js-getting-started.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "author": ""
+}
