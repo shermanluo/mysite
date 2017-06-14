@@ -26,7 +26,7 @@ app.post('/', function(req, res) {
   subject: req.body.firstname + " " + req.body.lastname,
   text: req.body.message
 };
-  console.log("HELLO");
+  console.log("HELLO2");
   transporter.sendMail(mailOptions, function(error, info){
   console.log("HELLO");
   if (error) {
