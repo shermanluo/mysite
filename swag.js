@@ -26,7 +26,9 @@ app.post('/', function(req, res) {
   subject: req.body.firstname + " " + req.body.lastname,
   text: req.body.message
 };
+  console.log("HELLO");
   transporter.sendMail(mailOptions, function(error, info){
+  console.log("HELLO");
   if (error) {
     console.log(error);
   } else {
@@ -44,7 +46,7 @@ app.post('/', function(req, res) {
 	db.close();
 	});
 });
-res.send(204);
+res.sendStatus(204);
 });
 
 
