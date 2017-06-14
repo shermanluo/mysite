@@ -322,7 +322,7 @@ text-align: center;
 
 <div class = "blck4" id = "4"> 
 <div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 26pt">Contact Me</h3> </br>
-<form id = "form", method = "post", onsubmit = "return mit()">
+<form id = "form", action = "/", method = "post", onsubmit = "return mit()">
 <span class = "form-text">First name *: </span><br>
 <input type="text" class = "smallentry" name = "firstname" for="firstname"><br>
 <span class = "form-text">Last name *: </span><br>
@@ -357,7 +357,7 @@ function mit() {
 		opacity += 0.005;
 		elem.style.opacity = opacity;
     }
-	return false;
+	return true;
 }
 </script>
 

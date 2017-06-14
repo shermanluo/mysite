@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
 
 app.post('/', function(req, res) {
+  console.log("done");
   var mailOptions = {
   from: 'shermyluo@gmail.com',
   to: 'shermanluo@berkeley.edu',
