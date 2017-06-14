@@ -27,7 +27,7 @@ app.post('/', function(req, res) {
   text: req.body.message
   };
   console.log(req.body.firstname);
-  transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMa(mailOptions, function(error, info){
   console.log("HELLO");
   if (error) {
     console.log(error);
