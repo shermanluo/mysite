@@ -3,7 +3,6 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
-
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -11,28 +10,40 @@ var transporter = nodemailer.createTransport({
     pass: 'lovedad1'
   }
 });
-
-
-
 var htmlPath = path.join(__dirname, 'public');
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/db";
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
 
-app.post('/action', function(req, res) {
+app.post('/', function(req, res) {
   var mailOptions = {
   from: 'shermyluo@gmail.com',
   to: 'shermanluo@berkeley.edu',
   subject: req.body.firstname + " " + req.body.lastname,
   text: req.body.message
 };
-transporter.sendMail(mailOptions, function(error, info){
+  transporter.sendMail(mailOptions, function(error, info){
   if (error) {
     console.log(error);
   } else {
     console.log('Email sent: ' + info.response);
   }
 });
-
+    console.log("1 record inserted");
+	MongoClient.connect(url, function(err, db) {
+	if (err) throw err;
+	var myobj = { firstname: req.body.firstname, lastname: req.body.lastname, message: req.body.message};
+	console.log("test");
+	db.collection("contact").insertOne(myobj, function(err, res) {
+	if (err) throw err;
+	console.log("success!");
+	db.close();
+	});
+});
+res.send(204);
 });
 
 
