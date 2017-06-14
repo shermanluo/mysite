@@ -14,7 +14,6 @@ var htmlPath = path.join(__dirname, 'public');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://shermanluo:Raymondsuks1@ds127132.mlab.com:27132/heroku_7xmghlz3";
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
 
