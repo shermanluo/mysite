@@ -4,10 +4,10 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'yahoo',
   auth: {
-    user: 'shermyluo@gmail.com',
-    pass: 'love1'
+    user: 'shermanluo@yahoo.com',
+    pass: 'lovedad1'
   }
 });
 var htmlPath = path.join(__dirname, 'public');
