@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "4.15.2",
-	"mongodb": "2.2"
+	"mongodb": "2.2",
+	"nodemailer": "4.0.1"
 	
   },
   "repository": {
