@@ -16,6 +16,7 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://heroku_7xmghlz3:se7igu36ap1lboi5h4rgfk5eha@ds127132.mlab.com:27132/heroku_7xmghlz3";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
+app.use(express.Router())
 
 app.all('*', function(req, res, next) {
 	console.log(req.host + req.originalUrl);
