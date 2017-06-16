@@ -20,7 +20,9 @@ app.use(express.static(htmlPath));
 app.all('*', function(req, res, next) {
 	console.log(req.host + req.originalUrl);
 	if (!req.secure) {res.redirect('https://' + req.host + req.originalUrl);
-	} else {next();}
+	} else {
+		console.log("going");
+		next();}
 });
 app.get('*', function (req, res) {
   res.sendFile(htmlPath + '/MyWebsite.html');
