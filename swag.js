@@ -16,6 +16,10 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://heroku_7xmghlz3:se7igu36ap1lboi5h4rgfk5eha@ds127132.mlab.com:27132/heroku_7xmghlz3";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
+app.all('*', function(req, res, next) {
+	if (!req.secure) {res.redirect('https://' + req.host + req.originalUrl);
+	} else {next();}
+});
 app.get('*', function (req, res) {
   res.sendFile(htmlPath + '/MyWebsite.html');
 })
