@@ -14,20 +14,19 @@ var transporter = nodemailer.createTransport({
 var htmlPath = path.join(__dirname, 'public');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://heroku_7xmghlz3:se7igu36ap1lboi5h4rgfk5eha@ds127132.mlab.com:27132/heroku_7xmghlz3";
+app.use(express.Router());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(htmlPath));
-app.use(express.Router())
 
-app.all('*', function(req, res, next) {
-	console.log(req.host + req.originalUrl);
-	if (!req.secure) {res.redirect('https://' + req.host + req.originalUrl);
+app.all('*', function(req, res, next) {	
+	console.log('https://' + req.hostname + req.originalUrl);   
+	console.log(req.secure);
+	if (!req.secure) {return res.redirect('https://' + req.hostname + req.originalUrl);
 	} else {
 		console.log("going");
-		next();}
-});
-app.get('*', function (req, res) {
-  res.sendFile(htmlPath + '/MyWebsite.html');
-})
+		next();
+	}
+}); 
 app.post('/', function(req, res) {
   console.log("done");
   var mailOptions = {
@@ -58,7 +57,9 @@ app.post('/', function(req, res) {
 });
 res.sendStatus(204);
 });
-
+app.get('*', function (req, res) {
+  res.sendFile(htmlPath + '/MyWebsite.html');
+})
 
 var server = app.listen(process.env.PORT || 5000, function () {
 });
