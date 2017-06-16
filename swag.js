@@ -20,8 +20,8 @@ app.use(express.static(htmlPath));
 
 app.all('*', function(req, res, next) {	
 	console.log('https://' + req.hostname + req.originalUrl);   
-	console.log(req.secure);
-	if (!req.secure) {return res.redirect('https://' + req.hostname + req.originalUrl);
+	console.log(req.protocol === 'https');
+	if (!req.protocol === 'https') {return res.redirect('https://' + req.hostname + req.originalUrl);
 	} else {
 		console.log("going");
 		next();
