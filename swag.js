@@ -20,7 +20,33 @@ app.get('*', function (req, res) {
   res.sendFile(htmlPath + '/MyWebsite.html');
 })
 app.post('/', function(req, res) {
-  
+  console.log("done");
+  var mailOptions = {
+  from: 'shermyluo@gmail.com',
+  to: 'shermanluo@berkeley.edu',
+  subject: req.body.firstname + " " + req.body.lastname,
+  text: req.body.message
+  };
+  console.log(req.body.firstname);
+  transporter.sendMail(mailOptions, function(error, info){
+  console.log("HELLO");
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
+    console.log("1 record inserted");
+	MongoClient.connect(url, function(err, db) {
+	if (err) throw err;
+	var myobj = { firstname: req.body.firstname, lastname: req.body.lastname, message: req.body.message};
+	console.log("test");
+	db.collection("contact").insertOne(myobj, function(err, res) {
+	if (err) throw err;
+	console.log("success!");
+	db.close();
+	});
+});
 res.sendStatus(204);
 });
 
