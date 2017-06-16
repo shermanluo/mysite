@@ -1,17 +1,86 @@
-﻿<!Doctype html>
+﻿<!doctype html>
 <html>
 <head>
-
-
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="colors.js"></script>
+<script>
+var white = true;
+$(document).ready(function (){
+            $("#tst").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#1").offset().top
+                }, 700);
+            });
+			$("#tst2").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#2").offset().top
+                }, 700);
+            });
+			$("#tst3").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#3").offset().top
+                }, 700);
+            });
+			$("#tst4").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#4").offset().top
+                }, 700);
+            });
+			var scrollTop = $(window).scrollTop();
+			$(window).scroll(function(){
+			if ($(document).scrollTop() > 30 && white) {
+				$("#filler").animate({'background-color': 'white'}, 100);
+				$("#nav").animate({'background-color': 'white'}, 100);
+				$("#name").animate({'color': 'black'}, 100);
+				$("#tst").animate({'color': 'rgb(255, 187, 0)'}, 100);
+				$("#tst2").animate({'color': 'rgb(255, 187, 0)'}, 100);
+				$("#tst3").animate({'color': 'rgb(255, 187, 0)'}, 100);
+				$("#tst4").animate({'color': 'rgb(255, 187, 0)'}, 100);
+				$("#nav").animate({'top': '0px'}, 100);
+				white = false;
+			}
+			if ($(document).scrollTop() < 30 && !white) {
+				$("#filler").animate({'background-color': 'rgb(225, 225, 225)'}, 100);
+				$("#nav").animate({'background-color': 'rgb(225, 225, 225)'}, 100);
+				$("#name").animate({'color': 'black'}, 100);
+				$("#tst").animate({'color': 'darkblue'}, 100);
+				$("#tst2").animate({'color': 'darkblue'}, 100);
+				$("#tst3").animate({'color': 'darkblue'}, 100);
+				$("#tst4").animate({'color': 'darkblue'}, 100);
+				$("#nav").animate({'top': '30px'}, 100);
+				white = true;
+			} 
+			
+			});
+			
+			
+});
+		
+</script>
 
 <style>
-body {margin: 0; padding: 0; border: 0; outline: 0; height: 100%; width: 100%;}
+* {
+font-family: helvetica;
+}
+#filler {
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+height: 60px;
+background-color: rgb(225,225,225);
+z-index: 1;
+}
+
+body {margin: 0; padding: 0; border: 0; outline: 0; height: 100%; width: 100%; background-color: rgb(225, 225, 225);}
 #name {
 float: left;
 padding-left: 5px;
 position: relative;
 font-size: 50px;
+font-family: helvetica;
+font-weight: bold;
+color: black;
 
 }
 h2 {
@@ -22,13 +91,14 @@ position: sticky;
 list-style-type: none;
 margin-top: 0px;
 padding: 0px;
-background-color: rgb(32, 32, 32);
+background-color: rgb(225, 225, 225);
 right: 0px;
 left: 0px;
-top: 0px;
+top: 30px;
+height: 60px;
 z-index: 3;
 min-width: 1000px;
-overflow: auto;
+overflow: visible;
 margin-bottom: -10px;
 }
 
@@ -36,7 +106,6 @@ li.nav {
 float: right;
 position: relative;
 height: 100%;
-bottom: -3.5px;
 }
 li.nav:hover {
 background-color: grey;
@@ -44,17 +113,15 @@ background-color: grey;
 
 li a.nav {
 display: block;
-border-right-style: solid;
-border-color: grey;
-border-width: 2px;
-text-align: center;
-padding : 8px;
+text-align: ;
+padding : 10px;
 text-decoration: none;
 font-size: 30px;
+font-weight: bold;
 color: rgb(0, 102, 204);
 }
 div.blck {
-background-color: white;
+background-color: rgb(225, 225, 225);
 height: 1000px;
 position: relative;
 top: 0px;
@@ -62,10 +129,11 @@ min-width: 1000px;}
 
 div.blck3 {
 min-width: 1000px;
-background-color: black;
-height: 1600px;
+background-color: white;
+height: 1700px;
 position: relative;
-top: 0px; }
+top: 0px; 
+overflow: hidden;}
 
 #inside {
 position: absolute; 
@@ -128,7 +196,7 @@ left: 5%;
 float: left;
 padding-left: 15px;}
 
-#experience.li {
+#.li {
 font-size: 30pt;
 }
 
@@ -141,7 +209,8 @@ position: relative;
 top: 0px;
 /*background-image: url("campanile.jpg");*/
 background-repeat: no-repeat;
-background-size: cover; }
+background-size: cover; 
+overflow:hidden;}
 
 #skills {
 border-width: 5px;
@@ -156,7 +225,7 @@ border-radius: 16px;
 }
 #skill-list {
 display: block;
-position: absolute;
+position: relative;
 font-size: 20pt;
 top: -10px;}
 
@@ -177,19 +246,20 @@ border: 9px solid rgb(0, 102, 204);
 border-radius: 15pt;
 overflow - auto; 
 margin-left: 9%;
-margin-top: 10%;
+margin-top: 12%;
 margih-right: 9%;
 width: 82%;
-height: 17%;
+height: 16%;
 float: left;
-background-color: white;}
+background-color: rgb(175, 175, 175);}
 
 div.blck4 {
 min-width: 1000px;
-background-color: rgb(0, 153, 153);
+background-color: white;
 height: 1200px;
 position: relative;
-top: 0px; }
+top: 0px; 
+overflow: hidden;}
 
 #contact {
 position: absolute;
@@ -204,6 +274,8 @@ top: 10%;
 display: block;
 }
 .smallentry {
+background-color: 
+rgb(220, 220, 220);
 margin-left: 5%;
 margin-bottom: 2%;
 width: 90%;
@@ -214,7 +286,7 @@ font-size:24pt;
 span.form-text {
 position: relative;
 left: 5%;
-font-size: 16pt;
+font-size: 20pt;
 }
 #mess {
 margin-left: 5%;
@@ -222,6 +294,7 @@ width: 90%;
 height: 35%;
 position: relative;
 font-size: 16pt;
+background-color: rgb(220, 220, 220);
 }
 
 .project-title {
@@ -267,16 +340,54 @@ font-style: italic;
 .bol{
 font-weight: bold;
 }
+
+
+#slant {
+  min-width: 1000px;
+  height: 90px;
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  width: 110%;
+  background-color: rgb(30, 28, 23);
+  transform: rotate(-2deg);
+
+}
+
+#slant2 {
+min-width: 1000px;
+height: 90px;
+  position: absolute;
+  bottom: -50px;
+  left: -20px;
+  width: 110%;
+  background-color: rgb(30, 28, 23);
+  transform: rotate(-2deg);
+}
+.rightitali {
+position: absolute;
+font-style: italic;
+right: 5%;
+font-size: 26pt;
+}
+.rightitali20 {
+position: absolute;
+font-style: italic;
+right: 5%;
+font-size: 20pt;
+}
 </style>
 </head>
 
 <body>
+<div id = "filler"></div>
+
 <ul id = "nav">
-<li id = "name" style = "color: white;">Sherman Luo</li>
-<li class = "nav"><a class = "nav" href="#4">Contact</a></li>
-<li class = "nav"><a class = "nav" href="#3">Projects</a></li>
-<li class = "nav"><a class = "nav" href="#2">Education/Experience</a></li>
-<li class = "nav"><a class = "nav" href="#1">Home</a></li>
+<li id = "name">Sherman Luo</li>
+<li class = "nav" id = "11"><a class = "nav" id = "tst4">Contact</a></li>
+<li class = "nav" id = "22"><a class = "nav" id = "tst3">Projects</a></li>
+<li class = "nav" id = "33"><a class = "nav" id = "tst2">Education/Experience</a></li>
+<li class = "nav" id = "44"><a class = "nav" id = "tst">Home</button></li>
 </ul>
 
 <div class = "blck" id = "1">
@@ -294,34 +405,35 @@ font-weight: bold;
 <div id = "campanile" ></div>
 <div class = "blck2" id = "2">
 <div id = "edu">
-<p id = "education" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt;">Education</span><br><br><span style = "font-size:26pt">University of California, Berkeley : 2016-2020 </span><br> Major: Computer Science <br> Technical GPA: 4.0 <br>Relevant courses: 
+<p id = "education" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt;">Education</span><br><br><span style = "font-size:26pt">University of California, Berkeley</span> <span class = "rightitali" style = "">2016-2020</span> <br> Major: Computer Science <br> Technical GPA: 4.0 <br>Relevant courses: 
 </p>
 <ul style= "margin: 0px; font-size: 20pt">
-<li> Math 54: Linear Algebra and Differential Equations | A+</li>
-<li> CS 61A: Structure and Interpretation of Computer Programs | A</li>
-<li> CS 61B: Data Structures| A</li>
-<li> CS 70: Discrete math and Probability theory | A</li>
+<li> Math 54: Linear Algebra and Differential Equations <span class = "rightitali20"> A+</span></li>
+<li> CS 61A: Structure and Interpretation of Computer Programs <span class = "rightitali20"> A</span></li>
+<li> CS 61B: Data Structures <span class = "rightitali20"> A</span></li>
+<li> CS 70: Discrete math and Probability theory <span class = "rightitali20"> A</span></li>
 </ul>
 <br>
 <br>
-<p id = "education" style= "margin: 0px; font-size: 20pt;"> <span style = "font-size: 26pt"> Evergreen Valley College 2015 </span><br> GPA: 4.0 <br>Relevant courses: </p>
-<ul style = "font-size : 20pt">
-<li> Math 073: Multivariable Calculus | A</li>
+<p id = "education" style= "margin: 0px; font-size: 20pt;"> <span style = "font-size: 26pt"> Evergreen Valley College</span> <span class = "rightitali" style = "">2015</span><br> GPA: 4.0 <br>Relevant courses: </p>
+<ul style = "font-size : 20pt; margin: 0px;">
+<li> Math 073: Multivariable Calculus <span class = "rightitali20"> A</span></li>
 </ul>
 </div>
 <div id = "skills"> <br>
+<span style = "font-size: 30pt; margin: 15px;">Skills</span>
 <ul id = "skill-list"> 
-<span style = "font-size: 30pt">Skills</span>
 <li>Java</li>
 <li>Python</li>
 <li>C#</li>
 <li>HTML, CSS, Javascript</li>
+<li>Node.js, Angular.js, MongoDB</li>
 <li>Scheme</li>
 <li>SQL</li>
 <li>Unity Game Engine</li>
 </ul></div>
 <div id = "expr">
-<p id = "experience" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt;">Experience</span><br><br>
+<p id = "experience" style= "margin: 0px; font-size: 1pt"> <span style = "font-size: 40pt;">Experience</span><br><br>
 <dl id = "exprlist"> 
   <dt class = "lucy"><span class = "bol">CS61A Academic Intern</span> - <span class = "itali">Summer 2017, University of California, Berkeley</span></dt>
   <dd>- Served as a tutor and lab assistant for CS61A: Structure and Interpretation of Computer Programs. Held office hours and tutored groups of students.</dd>
@@ -338,17 +450,21 @@ servers, and learned back-end Java</dd>
 
 </ul>
 </div>
+<div id = "slant2"></div>
 </div>
 
 <div class = "blck3" id = "3">
-<h2 id = "projects" style = "font-size: 50pt; color: lightblue">Projects</h2><br>
-<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">www.shermanluo@github.io - 2017</span><br><br><p class = "projectdesc">You're on it right now! Created using HTML, CSS, Javascript, and MongoDB for the form handling.</p></div>
-<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">SuperMarioMan Remix - 2016 CalHacks, University of California Berkeley</span><br> <p class = "projectdesc">SuperMarioMan Remix is a game I created during CalHacks 3.0, over a period of 36 hours. This mobile Android game was created in the Unity game engine using C#, with sound and art taken from the internet. Though it was once on the Google Play store, it was unfortunately removed due to copyright issues. </p></div>
-<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title">Floatyloon - 2015 NHSGA, Carnegie Mellon University</span><br> <p class = "projectdesc">My first game for the PC at Carnegie Mellon created over the course of one week, in which I was the lead programmer. Coded in the Unity game engine using C#, sound and art developed by teammates.</p></div>
+<div id = "slant"></div>
+<h2 id = "projects" style = "font-size: 50pt; color: grey; position: relative; top: 8%; margin-left: -8%;text-align: center;">Projects</h2><br>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title"><span class = "bol">www.shermanluo@github.io - </span><span class = "itali">2017</span></span><br><br><p class = "projectdesc">You're on it right now! Created using HTML, CSS, Javascript, and Node.js and hosted on a Heroku server. Utilizes modules such as the Express framework, and the form is connected to a MongoDB server hosted by mlab.com</p></div>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title"><span class = "bol">SuperMarioMan Remix - </span><span class = "itali">2016 CalHacks, University of California Berkeley</span></span><br> <p class = "projectdesc">SuperMarioMan Remix is a game I created during CalHacks 3.0, over a period of 36 hours. This mobile Android game was created in the Unity game engine using C#, with sound and art taken from the internet. Though it was once on the Google Play store, it was unfortunately removed due to copyright issues. </p></div>
+<div class = "project" ><img class = "project" src = "whiteduck.jpg"></img> <span class = "project-title"><span class = "bol">Floatyloon - </span><span class = "itali">2015 NHSGA, Carnegie Mellon University</span></span><br> <p class = "projectdesc">My first game for the PC at Carnegie Mellon created over the course of one week, in which I was the lead programmer. Coded in the Unity game engine using C#, sound and art developed by teammates.</p></div>
+<div id = "slant2"></div>
 </div>
 
 <div class = "blck4" id = "4"> 
-<div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 26pt">Contact Me</h3> </br>
+<div id = "slant"></div>
+<div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 30pt">Contact Me</h3> </br>
 <form id = "form", action = "/", method = "post", onsubmit = "return mit()">
 <span class = "form-text">First name *: </span><br>
 <input type="text" class = "smallentry" name = "firstname" for="firstname"><br>
@@ -359,9 +475,9 @@ servers, and learned back-end Java</dd>
 <span class = "form-text">Phone number: </span><br>
 <input type="text" class = "smallentry" name = "phonenumber"><br>
 <span class = "form-text">Message *: </span><br>
-<textarea name="message" id = "mess" rows="10" cols="30">
+<textarea  class = "inpt" name="message" id = "mess" rows="10" cols="30">
 </textarea> <br>
-<button type="submit" form="form" value="Submit">Submit</button>
+<button style = "position: relative; left: 5%; height: 50px; width: 150px; font-size: 20pt;"type="submit" form="form" value="Submit">Submit</button>
 <div id = "submitted"> <p id = "submittext">
 Thanks for contacting me, I'll get back to you soon! </p>
 </div>
