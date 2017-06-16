@@ -49,10 +49,16 @@ $(document).ready(function (){
 				$("#tst4").animate({'color': 'darkblue'}, 100);
 				$("#nav").animate({'top': '30px'}, 100);
 				white = true;
-			} 
-			
-			});
-			
+			}});
+			$("#form").submit(function(e) {
+			mit();
+			var url = "/"; // the script where you handle the form input.
+			$.post({
+            url: url,
+            data: $("#form").serialize(), // serializes the form's elements.
+         });
+		 e.preventDefault(); // avoid to execute the actual submit of the form.
+});
 			
 });
 		
@@ -469,7 +475,7 @@ servers, and learned back-end Java</dd>
 <div class = "blck4" id = "4"> 
 <div id = "slant"></div>
 <div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 30pt">Contact Me</h3> </br>
-<form id = "form", action = "/", method = "post", onsubmit = "return mit()">
+<form id = "form">
 <span class = "form-text">First name *: </span><br>
 <input type="text" class = "smallentry" name = "firstname" for="firstname"><br>
 <span class = "form-text">Last name *: </span><br>
