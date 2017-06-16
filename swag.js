@@ -47,7 +47,7 @@ app.post('/', function(req, res) {
 	db.close();
 	});
 });
-res.sendStatus(204);
+res.sendStatus(100);
 });
 
 
