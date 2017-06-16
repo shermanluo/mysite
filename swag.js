@@ -28,14 +28,7 @@ app.post('/', function(req, res) {
   text: req.body.message
   };
   console.log(req.body.firstname);
-  transporter.sendMail(mailOptions, function(error, info){
-  console.log("HELLO");
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
+  
     console.log("1 record inserted");
 	MongoClient.connect(url, function(err, db) {
 	if (err) throw err;
