@@ -49,7 +49,14 @@ app.post('/', function(req, res) {
 });
 res.end();
 });
+
+app.get('*', function (req, res) {
+	console.log("first");
+  res.sendFile(htmlPath + '/MyWebsite.html');
+})
+
 app.all('*', function(req, res, next) {	
+console.log("second");
 	console.log('https://' + req.hostname + req.originalUrl);   
 	console.log(req.protocol === 'https');
 	if (!req.protocol === 'https') {return res.redirect('https://' + req.hostname + req.originalUrl);
@@ -58,9 +65,6 @@ app.all('*', function(req, res, next) {
 		next();
 	}
 }); 
-app.get('*', function (req, res) {
-  res.sendFile(htmlPath + '/MyWebsite.html');
-})
 
 var server = app.listen(process.env.PORT || 5000, function () {
 });

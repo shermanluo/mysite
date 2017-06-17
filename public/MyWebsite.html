@@ -3,8 +3,10 @@
 <head>
 <script src="jquery-3.2.1.js"></script>
 <script src="colors.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js"></script>
 <script>
 var white = true;
+$('#form').validate();
 $(document).ready(function (){
             $("#tst").click(function (){
                 $('html, body').animate({
@@ -50,6 +52,7 @@ $(document).ready(function (){
 				$("#nav").animate({'top': '30px'}, 100);
 				white = true;
 			}});
+			
 			$("#form").submit(function(e) {
 			var url = "/"; // the script where you handle the form input.
 			$.post({
@@ -62,12 +65,13 @@ $(document).ready(function (){
          });
 		 mit();
 		 e.preventDefault(); // avoid to execute the actual submit of the form.
-});
+			});
+	
 			
-});
-		
+});	
 </script>
-
+<script>
+</script>
 <style>
 * {
 font-family: helvetica;
@@ -490,15 +494,15 @@ servers, and learned back-end Java</dd>
 <div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 30pt">Contact Me</h3> </br>
 <form id = "form">
 <span class = "form-text">First name *: </span><br>
-<input type="text" class = "smallentry" id = "firstname" name = "firstname" for="firstname"><br>
+<input type="text" class = "smallentry" id = "firstname" name = "firstname" for="firstname" required><br>
 <span class = "form-text">Last name *: </span><br>
-<input type="text" class = "smallentry" id = "lastname" name = "lastname"><br>
+<input type="text" class = "smallentry" id = "lastname" name = "lastname" required><br>
 <span class = "form-text">Email *: </span><br>
-<input type="text" class = "smallentry" id = "email" name = "email"><br>
+<input type="email" class = "smallentry" id = "email" name = "email" required><br>
 <span class = "form-text">Phone number: </span><br>
 <input type="text" class = "smallentry" id = "phonenumber" name = "phonenumber"><br>
 <span class = "form-text">Message *: </span><br>
-<textarea  class = "inpt" name="message" id = "mess" id = "mess" rows="10" cols="30">
+<textarea  class = "inpt" name="message" id = "mess" id = "mess" rows="10" cols="30" required>
 </textarea> <br>
 <button style = "position: relative; left: 5%; height: 50px; width: 150px; font-size: 20pt;"type="submit" form="form" value="Submit">Submit</button>
 <div id = "submitted"> <p id = "submittext">
