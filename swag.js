@@ -49,11 +49,9 @@ app.post('/', function(req, res) {
 });
 res.end();
 });
-
 app.get('*', function (req, res) {
   res.sendFile(htmlPath + '/MyWebsite.html');
 })
-
 
 var server = app.listen(process.env.PORT || 5000, function () {
 });
