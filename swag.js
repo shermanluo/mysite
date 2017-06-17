@@ -51,7 +51,6 @@ res.end();
 });
 
 app.get('*', function (req, res) {
-	console.log("first");
   res.sendFile(htmlPath + '/MyWebsite.html');
 })
 
