@@ -46,11 +46,8 @@ app.post('/', function(req, res) {
 	db.close();
 	});
 });
+res.end();
 });
-app.get('*', function (req, res) {
-  res.sendFile(htmlPath + '/MyWebsite.html');
-})
-
 app.all('*', function(req, res, next) {	
 	console.log('https://' + req.hostname + req.originalUrl);   
 	console.log(req.protocol === 'https');
@@ -60,6 +57,10 @@ app.all('*', function(req, res, next) {
 		next();
 	}
 }); 
+app.get('*', function (req, res) {
+  res.sendFile(htmlPath + '/MyWebsite.html');
+})
+
 var server = app.listen(process.env.PORT || 5000, function () {
 });
 
