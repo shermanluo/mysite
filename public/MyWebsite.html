@@ -51,12 +51,16 @@ $(document).ready(function (){
 				white = true;
 			}});
 			$("#form").submit(function(e) {
-			mit();
 			var url = "/"; // the script where you handle the form input.
 			$.post({
             url: url,
-            data: $("#form").serialize(), // serializes the form's elements.
+            data: {
+				'firstname' : $("#firstname").val(),
+				'lastname' : $("#lastname").val(),
+				'message' : $("#mess").val()
+					}, // serializes the form's elements.
          });
+		 mit();
 		 e.preventDefault(); // avoid to execute the actual submit of the form.
 });
 			
@@ -477,15 +481,15 @@ servers, and learned back-end Java</dd>
 <div id = "contact"><h3 style ="position: relative; margin-top: 0px; top: 5%; text-align:center; font-size: 30pt">Contact Me</h3> </br>
 <form id = "form">
 <span class = "form-text">First name *: </span><br>
-<input type="text" class = "smallentry" name = "firstname" for="firstname"><br>
+<input type="text" class = "smallentry" id = "firstname" name = "firstname" for="firstname"><br>
 <span class = "form-text">Last name *: </span><br>
-<input type="text" class = "smallentry" name = "lastname"><br>
+<input type="text" class = "smallentry" id = "lastname" name = "lastname"><br>
 <span class = "form-text">Email *: </span><br>
 <input type="text" class = "smallentry" name = "email"><br>
 <span class = "form-text">Phone number: </span><br>
 <input type="text" class = "smallentry" name = "phonenumber"><br>
 <span class = "form-text">Message *: </span><br>
-<textarea  class = "inpt" name="message" id = "mess" rows="10" cols="30">
+<textarea  class = "inpt" name="message" id = "mess" id = "mess" rows="10" cols="30">
 </textarea> <br>
 <button style = "position: relative; left: 5%; height: 50px; width: 150px; font-size: 20pt;"type="submit" form="form" value="Submit">Submit</button>
 <div id = "submitted"> <p id = "submittext">
