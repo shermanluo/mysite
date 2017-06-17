@@ -164,19 +164,19 @@ margin: 10%;
 border-radius: 15px;}
 
 #campanile {
-position: sticky;
+position: fixed;
 width: 100%;
 height: 900px;
 top: 50px;
 right: 0px;
 min-width: 1000px;
 margin-bottom: -900px;
-z-index: 0.5;
+z-index: -1;
 blur: 100px;
 background-image: url("campanile.jpg");
 background-repeat: no-repeat;
 background-size: cover; 
-opacity: 0.8;
+opacity: 1;
 }
 
 #edu {
@@ -485,9 +485,9 @@ servers, and learned back-end Java</dd>
 <span class = "form-text">Last name *: </span><br>
 <input type="text" class = "smallentry" id = "lastname" name = "lastname"><br>
 <span class = "form-text">Email *: </span><br>
-<input type="text" class = "smallentry" name = "email"><br>
+<input type="text" class = "smallentry" id = "email" name = "email"><br>
 <span class = "form-text">Phone number: </span><br>
-<input type="text" class = "smallentry" name = "phonenumber"><br>
+<input type="text" class = "smallentry" id = "phonenumber" name = "phonenumber"><br>
 <span class = "form-text">Message *: </span><br>
 <textarea  class = "inpt" name="message" id = "mess" id = "mess" rows="10" cols="30">
 </textarea> <br>
