@@ -144,7 +144,7 @@ min-width: 1000px;}
 div.blck3 {
 min-width: 1000px;
 background-color: white;
-height: 2500px;
+height: 4000px;
 position: relative;
 top: 0px; 
 overflow: hidden;}
@@ -163,7 +163,7 @@ border-radius: 15px;
 }
 img.me {
 position: absolute;
-height: 50%;
+height: 55%;
 min-width: 470px;
 max-width: 600px;
 width: 37%;
@@ -190,11 +190,9 @@ opacity: 1;
 
 #edu {
 background-color: rgba(212,175,55, 0.8);
-border-style: solid;
-border-width: 5px;
-border-radius: 16px;
-width: 60%;
-height: 30%;
+border-radius: 3px;
+width: 80%;
+height: 80%;
 position: relative;
 top: 5%;
 left: 5%;
@@ -202,18 +200,18 @@ float: left;
 padding-left: 15px;}
 
 #expr {
-background-color: rgba(212,175,55, 0.8);
-border-style: solid;
-border-width: 5px;
-border-radius: 16px;
-width: 80%;
-height: 35%;
-position: relative;
+background-color: rgba(200,200, 200, 0.9);
+width: 100%;
+height: 1000px;
 bottom: -30%;
-left: 5%;
-float: left;
-padding-left: 15px;}
+float: left;}
 
+#exprcontent{
+position: relative;
+top: 10%;
+padding-left: 40px;
+padding-right: 40px;
+}
 #.li {
 font-size: 30pt;
 }
@@ -222,7 +220,7 @@ font-size: 30pt;
 div.blck2 {
 
 min-width: 1000px;
-height: 2300px;
+height: 2000px;
 position: relative;
 top: 0px;
 /*background-image: url("campanile.jpg");*/
@@ -266,11 +264,11 @@ div.project {
 border: 9px solid rgb(0, 102, 204);
 border-radius: 15pt;
 overflow - auto; 
-margin-left: 4%;
-margin-top: 8%;
+margin-left: 8%;
+margin-top: 3%;
 margin-right: 4%;
-width: 92%;
-height: 13%;
+width: 83%;
+height: 300pt;
 float: left;
 background-color: rgb(175, 175, 175);}
 
@@ -357,7 +355,7 @@ text-align: center;
 }
 
 #exprlist {
-font-size: 20pt;
+font-size: 25pt;
 }
 
 .lucy{
@@ -386,7 +384,7 @@ font-weight: bold;
 
 #slant2 {
 min-width: 1000px;
-height: 90px;
+height: 100px;
   position: absolute;
   bottom: -45px;
   left: -20px;
@@ -407,6 +405,14 @@ right: 5%;
 font-size: 20pt;
 }
 
+div.bck {
+min-width: 1000px;
+background-color: black;
+height: 1200px;
+position: relative;
+top: 0px; 
+overflow: hidden;}
+
 </style>
 </head>
 
@@ -422,70 +428,74 @@ font-size: 20pt;
 
 <div class = "blck" id = "1">
 <div id = "inside"> 
-<h2 style = "font-size: 35pt; color: darkblue">About me</h2>
-<p style = "font-size: 22pt; text-align: justify; color: rgb(120, 120, 120);"> Hi, thanks for visiting my website! My name is Sherman, and I'm a second year Computer Science student at the University of California, Berkeley. Throughout my studies, I've developed an interest in web development, networking, and artificial intelligence. I'm interested in learning new cutting-edge technologies that are impacting the computer science field today, and I'm always looking to solve interesting problems. And one day, I hope to create my own tech-start up here in Silicon Valley. 
+<h2 style = "font-size: 30pt; color: darkblue">Hi, thanks for visiting my website!</h2>
+<p style = "font-size: 30pt; text-align: justify; color: rgb(120, 120, 120);"> My name is Sherman, and I'm a second year Computer Science student at the University of California, Berkeley. Throughout my studies, I've developed an interest in web development, networking, and artificial intelligence. 
 </p> 
-<p style = "font-size: 22pt; text-align: justify; color: rgb(120, 120, 120);"> Here you can see my qualifications, my education, and my projects. Feel free to contact me at shermanluo@berkeley.edu, or using the contact form below. 
+<p style = "font-size: 26pt; text-align: justify; color: rgb(120, 120, 120);"> Here you can see my qualifications, my education, and my projects. Feel free to contact me at shermanluo@berkeley.edu, or using the contact form below. 
 </p> 
 </div>
-<div> <img class = "me" src ="me.jpg">
+<div> <img class = "me" src ="me2.jpg">
 </img></div>
 </div>
 
 <div id = "campanile" ></div>
 <div class = "blck2" id = "2">
 <div id = "edu">
-<p id = "education" style= "margin: 0px; font-size: 20pt"> <span style = "font-size: 40pt; font-weight: bold;">Education</span><br><br><span style = "font-size:26pt; font-weight: bold;">University of California, Berkeley</span> <br><span class = "rightitali" style = "">2016-2020</span> <br> Major: Computer Science <br> Technical GPA: 4.0 <br>Relevant courses: 
+<p id = "education" style= "margin: 0px; font-size: 25pt"> <span style = "font-size: 40pt; font-weight: bold;">Education</span><br><br><span style = "font-size:20pt; font-weight: bold;">University of California, Berkeley</span> <br><span class = "rightitali" style = "">2016-2020</span> <br> Major: Computer Science <br> Technical GPA: 4.0 <br>Relevant courses: <br>
 </p>
-<ul style= "margin: 0px; font-size: 20pt">
+<ul style= "margin: 0px; font-size: 25pt">
 <li> Math 54: Linear Algebra and Differential Equations <span class = "rightitali20"> A+</span></li>
 <li> CS 61A: Structure and Interpretation of Computer Programs <span class = "rightitali20"> A</span></li>
 <li> CS 61B: Data Structures <span class = "rightitali20"> A</span></li>
-<li> CS 70: Discrete math and Probability theory <span class = "rightitali20"> A</span></li>
+<li> CS 61C: Computer Architecture <span class = "rightitali20"> A+</span></li>
+<li> CS 70: Discrete Math and Probability theory <span class = "rightitali20"> A</span></li>
+<li> CS 170: Algorithms and Intractible Problems <span class = "rightitali20"> A</span></li>
+<li> CS 188: Artificial Intelligence <span class = "rightitali20"> A</span></li>
+<li> STAT 134: Probability <span class = "rightitali20"> A</span></li>
+<li> CS 161: Security <span class = "rightitali20"> In Progress</span></li>
+<li> CS 186: Databases <span class = "rightitali20"> In Progress</span></li>
 </ul>
 <br>
+<span style = "font-size: 25pt">Honors:</span>
+<ul style= "margin: 0px; font-size: 25pt">
+<li> Dean's List </li>
+<li>  Upsilon Pi Epsilon Nu Chapter, Top 1/3 of CS majors</li>
+</ul>
 <br>
-<p id = "education" style= "margin: 0px; font-size: 20pt;"> <span style = "font-size: 26pt; font-weight: bold;"> Evergreen Valley College</span> <br><span class = "rightitali" style = "">2015</span><br> GPA: 4.0 <br>Relevant courses: </p>
-<ul style = "font-size : 20pt; margin: 0px;">
+<p id = "education" style= "margin: 0px; font-size: 25pt;"> <span style = "font-size: 26pt; font-weight: bold;"> Evergreen Valley College</span> <br><span class = "rightitali" style = "">2015</span><br> GPA: 4.0 <br>Relevant courses: </p>
+<ul style = "font-size : 25pt; margin: 0px;">
 <li> Math 073: Multivariable Calculus <span class = "rightitali20"> A</span></li>
 </ul>
 </div>
-<div id = "skills"> <br>
-<span style = "font-size: 30pt; margin: 15px; font-weight: bold;">Skills</span>
-<ul id = "skill-list"> 
-<li>Java, Python, C#</li>
-<li>HTML, CSS, Javascript</li>
-<li>Node.js, JQuery, Angular.js, MongoDB</li>
-<li>Scheme</li>
-<li>SQL</li>
-<li>Unity Game Engine</li>
-</ul>
-<p style = "font-size: 20pt; position: relative; left: 5px; top: -15px">On top of these skills, I'm incredibly versatile and eager to learn new things. I'm an excellent communicator, a quick learner, and highly ambitious</p></div>
+</div>
 <div id = "expr">
+<div id = "exprcontent">
 <p id = "experience" style= "margin: 0px; font-weight: bold;"> <span style = "font-size: 40pt;">Experience</span><br><br>
 <dl id = "exprlist"> 
-  <dt class = "lucy"><span class = "bol">CS61A Academic Intern</span> - <span class = "itali">Summer 2017, University of California, Berkeley</span></dt>
-  <dd>- Served as a tutor and lab assistant for CS61A: Structure and Interpretation of Computer Programs. Held office hours and tutored groups of students.</dd>
-  <dt class = "lucy"><span class = "bol">STEM Cisco Job Shadowing</span> - <span class = "itali">Summer 2015, Cisco Systems</span></dt>
-  <dd>- Shadowed engineering team that develops Network Analysis & Monitor Models. Did documentation, managed lab 
-servers, and learned back-end Java</dd>
- <dt class = "lucy"><span class = "bol">National High School Game Academy</span> - <span class = "itali">Summer 2015, Carnegie Mellon University</span></dt>
-  <dd>- Game designer and Programmer: Learned sound, animation, production, game design, and C# in Unity Engine. Created two games for PC/Android</dd>
-<dt class = "lucy"><span class = "bol">COSMOS</span> - <span class = "itali">Summer 2014, University of California, Davis</span></dt>
-  <dd>- Learned cosmology, Python, physics. Collected data over 2 weeks; used light from different days to find period of an M13 variable star in a research project.
-</dd>
+  <dt class = "lucy"><span class = "bol">Software Engineering Intern at ServiceNow</span> - <span class = "itali">Summer 2018, ServiceNow, Santa Clara</span></dt>
+  <dd>- Prospective Summer Software Engineering intern.</dd>
+  <dt class = "lucy"><span class = "bol">Web Development Chair</span> - <span class = "itali">Spring 2018, Upsilon Pi Epsilon Nu Chapter, UC Berkeley</span></dt>
+  <dd>- Served as Web Development Chair for Upsilon Pi Epsilon: Computer Science Honor Society. I manage a committee that develops and updates our organization website. We work on projects to implement essential features and promote our resources to the CS Department. Written in Django.</dd>
+  <dt class = "lucy"><span class = "bol">Director of Education</span> - <span class = "itali">Spring 2018, Codeology Club, UC Berkeley</span></dt>
+  <dd>- Served as Education Coordinator for Codeology at Berkeley: Computer Science club that helps members find a role in the tech industry. I coordinate and teach technical weekly workshops.</dd>
+  <dt class = "lucy"><span class = "bol">CS61A Tutor</span> - <span class = "itali">Fall 2017, UC Berkeley EECS Department</span></dt>
+  <dd>- Served as a tutor and for CS61A: Structure and Interpretation of Computer Programs. Held weekly sections and tutored groups of students.</dd>
+
 
   </dl>
 
 </ul>
 </div>
-<div id = "slant2"></div>
 </div>
-
 <div class = "blck3" id = "3">
 <div id = "slant"></div>
 <h2 id = "projects" style = "font-size: 50pt; color: grey; position: relative; margin-top: 10%; margin-left: -8%; margin-bottom: -10%;text-align: center;">Projects</h2><br>
-<div class = "project" style = "margin-top: 14%;"><img class = "project" src = "myweb.JPG"></img> <span class = "project-title"><span class = "bol">https://shermanluo.herokuapp.com/ - </span><span class = "itali">2017</span></span><br><br><p class = "projectdesc">You're on it right now! This is my personal website created using HTML, CSS, Javascript, JQuery, and Node.js and hosted on a free Heroku server. Utilizes modules such as the Express framework, and the form is connected to a MongoDB server hosted by mlab.com</p><a class = "projlink" href = "https://shermanluo.herokuapp.com/">Link</a></div>
+
+<div class = "project" style = "margin-top: 14%;"><img class = "project" src = "teddy.JPG"></img> <span class = "project-title"><span class = "bol">TeddyTA - </span><span class = "itali">First Place Winner Cisco Spark API, CalHacks 4.0, 2017</span></span><br><br><p class = "projectdesc">
+	A Chatbot that handles announcements, grades, organization, and much more to help teachers manage their classes on Cisco Spark, an upcoming competitor to Slack. In addition to this, we created a web server to store information offline and utilize API calls to add NLP functionalities to identify key concepts and provide summaries of the day's discussion.
+</p><a class = "projlink" href = "https://devpost.com/software/teddyta">Link</a></div>
+
+<div class = "project"><img class = "project" src = "myweb.JPG"></img> <span class = "project-title"><span class = "bol">https://shermanluo.herokuapp.com/ - </span><span class = "itali">2017</span></span><br><br><p class = "projectdesc">You're on it right now! This is my personal website created using HTML, CSS, Javascript, JQuery, and Node.js and hosted on a free Heroku server. Utilizes modules such as the Express framework, and the form is connected to a MongoDB server hosted by mlab.com</p><a class = "projlink" href = "https://shermanluo.herokuapp.com/">Link</a></div>
 <div class = "project" ><img class = "project" src = "mario.JPG"></img> <span class = "project-title"><span class = "bol">SuperMarioMan Remix - </span><span class = "itali">2016 CalHacks, University of California Berkeley</span></span><br> <p class = "projectdesc">SuperMarioMan Remix is a game I created during CalHacks 3.0, over a period of 36 hours. This mobile Android game was created in the Unity game engine using C#, with sound and art taken from the internet. Though it was once on the Google Play store, it was unfortunately removed due to copyright issues. </p><a class = "projlink" href = "https://www.youtube.com/watch?v=zfd2LbXLweQ&feature=youtu.be">Link</a></div>
 <div class = "project" ><img class = "project" src = "pacman.JPG"></img> <span class = "project-title"><span class = "bol">PacMan Reloaded - </span><span class = "itali">2015 NHSGA, Carnegie Mellon University</span></span><br> <p class = "projectdesc">My first game for the PC at Carnegie Mellon created over the course of one week, in which I was the lead programmer. Coded in the Unity game engine using C#, sound and art developed by teammates.</p><a class = "projlink" href = "https://www.youtube.com/watch?v=V_zLy5nXde0">Link</a></div>
 <div class = "project" ><img class = "project" src = "float.JPG"></img> <span class = "project-title"><span class = "bol">FloatyLoon - </span><span class = "itali">2015 NHSGA, Carnegie Mellon University</span></span><br> <p class = "projectdesc">A drag and evade game created in Unity. Art and sound assets created by teammates, and I did the core programming using C#. Enemies change as you travel higher and higher, and difficulty increases. </p><a class = "projlink" href = "https://youtu.be/yfR48Z9T5HM">Link</a></div>
